@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +9,261 @@
 
 body {
   min-height: 100vh;
+  background: url(../assets/images/partly-cloudy.jpg) center/100% no-repeat;
+  font-family: Poppins;
+  color: #ffffff;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: min-content 1fr;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+input {
+  background: none;
+  border: none;
+  font-family: Poppins;
+}
+
+input:focus {
+  outline: none;
+}
+
+.page-section {
+  background: linear-gradient(135deg, #cccccc80, #cccccc20);
+  backdrop-filter: blur(8px);
+  border: 1px solid #ffffff20;
+}
+
+.page-component {
+  background: linear-gradient(135deg, #70707080, #70707040);
+  backdrop-filter: blur(16px);
+  border: 1px solid #cccccc40;
+}
+
+.hover-animated {
+  transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 500ms;
+}
+
+.hover-animated:hover {
+  transform: scale(1.025);
+  background: linear-gradient(135deg, #80808060, #80808020);
+}
+
+.invisible {
+  display: none;
+}
+
+.search img,
+.icon {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(260deg)
+    brightness(100%) contrast(100%);
+}
+
+.sidebar {
+  padding: 32px;
+  margin: 16px;
+  border-radius: 16px;
+  grid-row: 1 / 3;
+
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+}
+
+.greeting {
+  font-size: 2rem;
+}
+
+.today-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.today-stats .miscellaneous {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px;
+}
+
+.miscellaneous > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border-radius: 16px;
+  display: grid;
+  grid-template-rows: auto 128px auto;
+  justify-items: center;
+  align-items: flex-end;
+
+  transition: transform cubic-bezier(0.68, -0.55, 0.265, 1.55) 500ms;
+}
+
+.miscellaneous img {
+  width: 32px;
+  height: auto;
+  align-self: center;
+}
+
+.today-stats .weather {
+  display: grid;
+  grid-template-columns: min-content auto;
+  column-gap: 16px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.today-stats .weather-icon {
+  grid-row: 1 / 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.today-stats .temperature {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  justify-self: flex-end;
+}
+
+.today-stats .weather-status {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.datetime {
+  width: max-content;
+  position: relative;
+}
+
+.datetime .time {
+  font-size: 5rem;
+}
+
+.datetime .date {
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+}
+
+.unrealtime {
+  position: absolute;
+  top: 16px;
+  right: -24px;
+}
+
+.topbar {
+  padding: 8px;
+  margin: 16px;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: auto min-content min-content;
+  align-items: center;
+  height: min-content;
+  border-radius: 16px;
+}
+
+.wordmark {
+  font-size: 3rem;
+  justify-self: center;
+}
+
+.unit {
+  display: flex;
+  margin-right: 16px;
+}
+
+.unit label {
+  margin-right: 8px;
+}
+
+.unit select {
+  border: none;
+  border-radius: 4px;
+  background: #40404080;
+  border: 1px solid #808080;
+  color: #ffffff;
+}
+
+.search {
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  height: min-content;
+  margin-right: 16px;
+
+  background-color: #40404080;
+  border: 1px solid #808080;
+  border-radius: 8px;
+}
+
+.searchbar {
+  padding: 8px;
+  background: none;
+  border: none;
+  color: #ffffff;
+}
+
+.searchbar::placeholder {
+  color: #cccccc;
+}
+
+.search img {
+  margin: 0 8px;
+  width: 20px;
+  height: auto;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location {
+  padding: 12px 48px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.location .city {
+  font-size: 2rem;
+}
+
+.bar {
+  margin: 32px 0;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.bar-header {
+  margin-top: 16px;
+  font-size: 2rem;
+}
+
+.weather-bar {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.weather-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:  8px 16px;
+  margin: 16px;
+  border-radius: 16px;
+}
+
+.weather-item .time, .weather-item .date {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
