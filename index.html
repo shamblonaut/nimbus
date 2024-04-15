@@ -1,159 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nimbus</title>
-<script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
-<body>
-  <div class="sidebar page-section">
-    <div class="greeting">Good Afternoon, Stranger!</div>
-    <div class="today-stats">
-      <div class="today-stat wind page-component hover-animated">
-        <div class="today-stat-title">Wind Speed</div>
-        <img src="d2a4a1fe8ac82ef136c5.svg" alt="Wind Speed" class="icon wind-icon">
-        <div class="data wind-data">21 km/h</div>
-      </div>
-      <div class="today-stat humidity page-component hover-animated">
-        <div class="today-stat-title">Humidity</div>
-        <img src="49d3b1343e88b01d4777.svg" alt="Humidity" class="icon humidity-icon">
-        <div class="data humidity-data">55%</div>
-      </div>
-      <div class="today-stat clouds page-component hover-animated">
-        <div class="today-stat-title">Clouds</div>
-        <img src="6320a388771887c1a0cb.svg" alt="Clouds" class="icon clouds-icon">
-        <div class="data clouds-data">25%</div>
-      </div>
-      <div class="today-stat pressure page-component hover-animated">
-        <div class="today-stat-title">Pressure</div>
-        <img src="675eeccda64d807fafb0.svg" alt="Pressure" class="icon pressure-icon">
-        <div class="data pressure-data">1008 mb</div>
-      </div>
-      <div class="weather-today page-component hover-animated">
-        <img src="c05e8cc2b0209d9daae7.svg" alt="Weather" class="weather-icon">
-        <div class="temperature">33 °C</div>
-        <div class="weather-status">Partly Cloudy</div>
-      </div>
-    </div>
-    <div class="datetime">
-      <div class="time">16:30</div>
-      <div class="date">Friday, April 12, 2024</div>
-      <div class="unrealtime invisible"><img src="9329c2f6ebba16d6c502.svg" alt="Not in Realtime" class="icon"></div>
-    </div>
-  </div>
-  <div class="topbar page-section">
-    <div class="wordmark">Nimbus</div>
-    <div class="unit">
-      <label for="unit-select">Unit: </label>
-      <select name="unit" id="unit-select">
-        <option value="metric">Metric</option>
-        <option value="imperial">Imperial</option>
-      </select>
-    </div>
-    <div class="search">
-      <input type="text" class="searchbar" placeholder="Enter city">
-      <img src="f9705ffe407455bd10ed.svg" alt="Search">
-    </div>
-  </div>
-  <div class="content">
-    <div class="location page-component">
-      <div class="city">Kasaragod</div>
-      <div class="country">India</div>
-    </div>
-    <div class="bar page-section">
-      <div class="bar-header">Today</div>
-      <div class="weather-bar hourly">
-        <div class="weather-item hbhbl hover-animated">
-          <div class="time">13:00</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nimbus</title>
+  <script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="sidebar page-section">
+      <div class="greeting">Good Morning, Stranger!</div>
+      <div class="today-stats">
+        <div class="weather-today page-component hover-animated">
+          <img
+            src="c05e8cc2b0209d9daae7.svg"
+            alt="Weather"
+            class="weather-icon"
+          />
+          <div class="temperature">— °C</div>
+          <div class="weather-status">—</div>
         </div>
-        <div class="weather-item hbl hover-animated">
-          <div class="time">14:00</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
+        <div class="today-stat wind page-component hover-animated">
+          <div class="today-stat-title">Wind Speed</div>
+          <img
+            src="d2a4a1fe8ac82ef136c5.svg"
+            alt="Wind Speed"
+            class="icon wind-icon"
+          />
+          <div class="data wind-data">— km/h</div>
         </div>
-        <div class="weather-item last hover-animated">
-          <div class="time">15:00</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
+        <div class="today-stat humidity page-component hover-animated">
+          <div class="today-stat-title">Humidity</div>
+          <img
+            src="49d3b1343e88b01d4777.svg"
+            alt="Humidity"
+            class="icon humidity-icon"
+          />
+          <div class="data humidity-data">—%</div>
         </div>
-        <div class="weather-item now page-component">
-          <div class="time">16:00</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
+        <div class="today-stat clouds page-component hover-animated">
+          <div class="today-stat-title">Clouds</div>
+          <img
+            src="6320a388771887c1a0cb.svg"
+            alt="Clouds"
+            class="icon clouds-icon"
+          />
+          <div class="data clouds-data">—%</div>
         </div>
-        <div class="weather-item next hover-animated">
-          <div class="time">17:00</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
-        <div class="weather-item han hover-animated">
-          <div class="time">18:00</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
-        <div class="weather-item hahan hover-animated">
-          <div class="time">19:00</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
+        <div class="today-stat pressure page-component hover-animated">
+          <div class="today-stat-title">Pressure</div>
+          <img
+            src="675eeccda64d807fafb0.svg"
+            alt="Pressure"
+            class="icon pressure-icon"
+          />
+          <div class="data pressure-data">— mb</div>
         </div>
       </div>
-    </div>
-    <div class="bar page-section">
-      <div class="bar-header">This Week</div>
-      <div class="weather-bar daily">
-        <div class="weather-item dbdby hover-animated">
-          <div class="date">Apr 9</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
-        <div class="weather-item dby hover-animated">
-          <div class="date">Apr 10</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
-        <div class="weather-item yesterday hover-animated">
-          <div class="date">Apr 11</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
-        <div class="weather-item today page-component">
-          <div class="date">Apr 12</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
-        <div class="weather-item tomorrow hover-animated">
-          <div class="date">Apr 13</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
-        <div class="weather-item dat hover-animated">
-          <div class="date">Apr 14</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
-        <div class="weather-item dadat hover-animated">
-          <div class="date">Apr 15</div>
-          <div class="temperature">33 °C</div>
-          <img src="c05e8cc2b0209d9daae7.svg" alt="Weather Icon" class="weather-icon">
-          <div class="weather-status">Partly Cloudy</div>
-        </div>
+      <div class="datetime">
+        <div class="time">—:—</div>
+        <div class="date">—, — —, —</div>
       </div>
     </div>
-  </div>
-</body>
+    <div class="topbar page-section">
+      <div class="wordmark">Nimbus</div>
+      <div class="unit">
+        <label for="unit-select">Unit: </label>
+        <select name="unit" id="unit-select">
+          <option value="metric" selected>Metric</option>
+          <option value="imperial">Imperial</option>
+        </select>
+      </div>
+      <div class="search">
+        <input type="text" class="searchbar" placeholder="Enter city" />
+        <button class="search-btn">
+          <img src="f9705ffe407455bd10ed.svg" alt="Search" />
+        </button>
+      </div>
+    </div>
+    <div class="content">
+      <div class="location page-component">
+        <div class="city">—</div>
+        <div class="region">—, —</div>
+      </div>
+      <div class="bar page-section">
+        <div class="bar-header">Hourly</div>
+        <div class="weather-bar hourly"></div>
+      </div>
+      <div class="bar page-section">
+        <div class="bar-header">Daily</div>
+        <div class="weather-bar daily"></div>
+      </div>
+    </div>
+    <div class="loading-overlay invisible">
+      <img
+        src="009be1f64aebba92c80c.gif"
+        alt="Loading"
+        class="loading-animation"
+      />
+      <p class="loading-text">Loading...</p>
+    </div>
+  </body>
 </html>
