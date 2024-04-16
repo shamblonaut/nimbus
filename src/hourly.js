@@ -17,7 +17,17 @@ export default function updateHourlyBar() {
     weatherItem.classList.add("weather-item");
     weatherItem.classList.add(i === 0 ? "page-component" : "hover-animated");
 
-    const hourData = todayHourlyData[Number(hourString) + i];
+    const hour = Number(hourString);
+    let relativeIndex = hour + i;
+
+    let hourData;
+    if (hour < advanceHours && relativeIndex < 0) {
+      hourData = todayHourlyData[24 + relativeIndex];
+    } else if (hour >= 24 - advanceHours) {
+      hourData = todayHourlyData[relativeIndex - 24];
+    } else {
+      hourData = todayHourlyData[relativeIndex];
+    }
 
     weatherItem.innerHTML = `
             <div class="time">${hourData.time.split(" ").pop()}</div>
