@@ -23,8 +23,9 @@ export default function updateHourlyBar() {
     let hourData;
     if (hour < advanceHours && relativeIndex < 0) {
       hourData = todayHourlyData[24 + relativeIndex];
-    } else if (hour >= 24 - advanceHours) {
+    } else if (hour >= 24 - advanceHours && relativeIndex >= 24) {
       hourData = todayHourlyData[relativeIndex - 24];
+      console.log(relativeIndex);
     } else {
       hourData = todayHourlyData[relativeIndex];
     }
